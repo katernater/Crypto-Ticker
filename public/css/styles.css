@@ -1,0 +1,29 @@
+.box {
+  margin: auto;
+  text-align: center;
+}
+
+.container {
+  background-color: white;
+
+  padding: 30px;
+}
+
+.form-row{
+  padding-bottom: 15px;
+}
+body {
+  background-color: #e7f6d5;
+  margin: 15px 15px 0;
+  font-size: 1rem;
+}
+
+
+h1 {
+  margin: 15px 15px 30px;
+}
+
+footer {
+  text-align: center;
+  margin-top: 5px;
+}

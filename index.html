@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>CryptoCurrency Ticker</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+
+<body>
+  <div class="container rounded">
+    <div class="box">
+      <h1>CryptoCurrency Ticker</h1>
+      <form action="/ticker" method="post">
+        <div class="form-row justify-content-md-center align-items-center">
+          <div class = "col-auto">
+
+
+
+          <input class = "form-control" type="text" name="amount" placeholder="Quantity" />
+        </div>
+        <div class = "col-auto">
+          <select class="form-control" name="crypto">
+            <option value="BTC">Bitcoin</option>
+            <option value="ETH">Ethereum</option>
+            <option value="LTC">Litecoin</option>
+          </select>
+  </div>
+  <div class = "col-auto">
+          <select class="form-control" name="fiat">
+            <option value="USD">US Dollar</option>
+            <option value="GBP">GB Pound</option>
+            <option value="EUR">EU Euro</option>
+            <option value="AUD">AU Dollar</option>
+          </select>
+</div>
+<div class = "col-auto">
+          <button class="btn btn-outline-success" type="submit" name="button">Check</button>
+</div>
+        </div>
+        <p>
+          <%= conversionRate %>
+        </p>
+        <p>
+          The graph shows the historical price data for <%= crypt %> in <%= curr %>.
+        </p>
+        <p>
+          Enter a value above to generate the current exchange rate between two currencies and to update the graph.
+        </p>
+
+    </div>
+    <script src="https://widgets.coingecko.com/coingecko-coin-compare-chart-widget.js"></script>
+    <coingecko-coin-compare-chart-widget coin-ids="<%=crypt%>" currency="<%= curr %>" locale="en"></coingecko-coin-compare-chart-widget>
+
+    </form>
+  </div>
+  <footer>
+    Project Completed 2019 by Kaethe Lassen
+  </footer>
+</body>
+
+</html>
